@@ -10,10 +10,18 @@
     "bench",
     "bench-slim"
   ],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunGg12138/bench-slim.git"
+  },
+  "author": "sungg12138",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SunGg12138/bench-slim/issues"
+  },
+  "homepage": "https://github.com/SunGg12138/bench-slim#readme"
 }
