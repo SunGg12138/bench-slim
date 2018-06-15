@@ -8,7 +8,7 @@ let options = {
   // 把结果传过来测试
   tester: function(body){
     // console.log(body)
-    return true;
+    return /百度首页/.test(body);
   },
   // 请求前会调用
   beforeHook: function(options, index){

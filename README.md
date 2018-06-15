@@ -1,6 +1,6 @@
 # bench-slim
 
-很简单的测试工具，当然，返回的数据也很简单
+很简单的并发测试工具，当然，返回的数据也很简单
 
 ## 安装
 
@@ -22,12 +22,16 @@ let options = {
   // 把结果传过来测试
   // 如果返回false，会把这次请求算作wrong属性上
   tester: function(body){
-    return true;
+    return /百度首页/.test(body);
   },
   // 请求前会调用
   // 你可以修改请求的options，来设置这次请求的headers、cookie等等
   beforeHook: function(options, index){
     console.log(index)
+  },
+  // 异步的钩子，可以进行异步设置参数
+  asyncBeforeHook: function (options, index){
+    return Promise.resolve();
   },
   // 请求后会调用
   // 你可以在这里查看这次请求返回的错误和返回的数据
