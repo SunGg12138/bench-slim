@@ -46,8 +46,11 @@ let request_options = {
   method: 'GET'
 };
 
-bench(request_options, options, function(result){
-  console.log(result)
+bench(request_options, options, async function(result){
+  // 把结果数据打印出来
+  console.log(result.toJson());
+  // 把结果数据输出到指定文件
+  await result.export(__dirname + '/result.json');
 });
 
 // 结果
